@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#071019" />
+  <meta name="description" content="Mesa Arcana — apoio visual para RPG de mesa, com mapa, grid, ações, magias, iluminação e sessões locais pela rede." />
+  <title>Mesa Arcana</title>
+  <link rel="icon" type="image/png" href="./assets/mesa-arcana.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#/inicio" aria-label="Mesa Arcana - Início">
+      <img src="./assets/mesa-arcana.png" alt="" class="brand-mark" />
+      <span class="brand-copy">
+        <strong>Mesa Arcana</strong>
+        <small>Apoio visual para RPG de mesa</small>
+      </span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="#/inicio" data-route="inicio">Início</a>
+      <a href="#/recursos" data-route="recursos">Recursos</a>
+      <a href="#/download" data-route="download" class="nav-download">Download</a>
+    </nav>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="./assets/mesa-arcana.png" alt="" />
+      <div><strong>Mesa Arcana</strong><span>Feito para complementar a mesa, não substituir o RPG.</span></div>
+    </div>
+    <span class="footer-version" id="footerVersion"></span>
+  </footer>
+
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

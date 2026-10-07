@@ -1,0 +1,18 @@
+Coloque nesta pasta o arquivo do instalador compactado com EXATAMENTE este nome:
+
+dist-instalador.zip
+
+O botão de download do site aponta para:
+/dist-instalador/dist-instalador.zip
+
+Estrutura esperada:
+mesa-arcana-hub/
+├── index.html
+├── app.js
+├── styles.css
+├── config.js
+├── vercel.json
+├── assets/
+│   └── mesa-arcana.png
+└── dist-instalador/
+    └── dist-instalador.zip
