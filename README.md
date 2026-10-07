@@ -33,3 +33,12 @@ Edite `config.js`.
 ## Observação sobre o arquivo
 
 A Vercel impõe limites de upload de arquivos estáticos conforme o plano. Se o ZIP do instalador ultrapassar o limite do seu plano, mantenha o site na Vercel e troque apenas `arquivoDownload` em `config.js` para um armazenamento externo.
+
+
+## Download atual
+
+O botão de download aponta diretamente para o GitHub Releases:
+
+`https://github.com/HigorBernardesPNG/Mesa-Arcana-Teste-0.12.1-controll/releases/download/MVP0121/dist-instalador.zip`
+
+Para trocar o arquivo no futuro, altere apenas `arquivoDownload` em `config.js`.

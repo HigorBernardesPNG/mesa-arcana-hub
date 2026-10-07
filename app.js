@@ -132,26 +132,21 @@
     const button = document.getElementById('downloadButton');
     if (!button) return;
 
-    button.addEventListener('click', async () => {
+    button.addEventListener('click', () => {
       const status = document.getElementById('downloadStatus');
       status.className = 'download-status';
-      status.textContent = 'Preparando download…';
+      status.textContent = 'Abrindo download pelo GitHub Releases…';
 
-      try {
-        const response = await fetch(cfg.arquivoDownload, { method: 'HEAD', cache: 'no-store' });
-        if (!response.ok) throw new Error('Arquivo não encontrado');
+      const link = document.createElement('a');
+      link.href = cfg.arquivoDownload;
+      link.rel = 'noopener';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
 
-        const link = document.createElement('a');
-        link.href = cfg.arquivoDownload;
-        link.download = cfg.nomeArquivo || 'dist-instalador.zip';
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-        status.textContent = 'Download iniciado.';
-      } catch {
-        status.className = 'download-status error';
-        status.textContent = 'O instalador ainda não está disponível neste deploy.';
-      }
+      setTimeout(() => {
+        status.textContent = 'Download solicitado.';
+      }, 600);
     });
   }
 
